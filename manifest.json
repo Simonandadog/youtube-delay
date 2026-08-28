@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Delay",
+  "version": "0.1",
+  "description": "Delays opening YouTube and shows a message you set",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": ["storage"],
+  "browser_action": {
+    "default_title": "YouTube Delay settings",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["youtube-delay.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "youtubedelay@mozilla.org"
+    }
+  }
+}

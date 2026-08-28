@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Delay settings</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 12px;
+      min-width: 220px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      margin: 8px 0 4px;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 6px;
+    }
+    #save {
+      margin-top: 12px;
+      width: 100%;
+      padding: 6px;
+    }
+    #status {
+      color: #2e7d32;
+      font-size: 12px;
+      min-height: 15px;
+      margin-top: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <label for="delay">Delay (seconds)</label>
+  <input id="delay" type="number" min="1" step="1">
+  <label for="message">Message</label>
+  <input id="message" type="text">
+  <button id="save">Save</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
