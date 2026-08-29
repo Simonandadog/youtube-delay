@@ -24,7 +24,7 @@
   function doDelay() {
     browser.storage.local.get(['delay', 'message']).then((result) => {
       const delay = (result.delay || 30) * 1000;
-      const message = result.message || 'Do you really want to watch this, or are you just wasting time dickhead?.';
+      const message = result.message || 'Do you really want to watch this, or are you just wasting time, dickhead?.';
 
       const old = document.getElementById('yd_delay_div');
       if (old) old.remove();
